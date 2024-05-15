@@ -1,0 +1,57 @@
+---
+title: "Green Shores for Homes - Permit Guide for Homeowners"
+output: html_document
+date: "2024-05-15"
+params:
+  province: NA
+  district1: NA
+  district2: NA
+  areatype: NA
+  firstnations: NA
+  agency: NA
+  spsrisk: NA
+  text: NA
+---
+
+
+```{r echo = FALSE}
+
+library(DT)
+ datalk <- t(data.frame(
+            c('Province',
+              params$province),
+            c('District',
+              params$district1),
+            c('',
+              params$district2),
+            c('Area type',
+              params$areatype),
+            c('First Nations Territory',
+              params$areatype),
+            c('Guiding agency that operates in the area',
+              params$firstnations),
+            c('Adjacent to a National Wildlife Area',
+              params$agency),
+            c('Presence of species at risk or sensitive habitats',
+              params$spsrisk)
+          ))
+          
+          colnames(datalk) <- NULL
+          
+          DT::datatable(
+            datalk,
+            rownames = FALSE,
+            options = list(ordering = FALSE,
+                           dom = 't'),
+            # remove table interactive default options
+            colnames = rep("", ncol(datalk))
+          ) # remove column names
+```
+
+### Briefly describe the main goals or desired outcomes of your shoreline restoration project:
+
+```{r pressure, echo=FALSE}
+cat(params$text)
+```
+
+

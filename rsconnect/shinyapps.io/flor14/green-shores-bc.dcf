@@ -1,0 +1,12 @@
+name: green-shores-bc
+title: green-shores-bc
+username: flor14
+account: flor14
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12005102
+bundleId: 8619061
+url: https://flor14.shinyapps.io/green-shores-bc/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
